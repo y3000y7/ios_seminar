@@ -34,12 +34,7 @@ class TestViewController : UIViewController, UITableViewDelegate, UITableViewDat
         return datas.count
     }
     
-    // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-    // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
-    
-    @available(iOS 2.0, *)
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
         if(indexPath.item % 2 == 0){
             let cell:TestTableCell = tableView.dequeueReusableCellWithIdentifier("cell2") as! TestTableCell
             cell.label.text = datas[indexPath.item]
