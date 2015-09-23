@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PS5-br-HYc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Realm View Controller-->
+        <scene sceneID="Ore-bl-Itb">
+            <objects>
+                <viewController id="PS5-br-HYc" customClass="RealmViewController" customModule="RealmTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V5f-o9-NEN"/>
+                        <viewControllerLayoutGuide type="bottom" id="4pS-He-Jjv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EzW-yy-GPD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNe-Jq-TBP">
+                                <rect key="frame" x="0.0" y="498" width="80" height="70"/>
+                                <color key="backgroundColor" red="1" green="0.86109683388157898" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="oV9-rD-I7t"/>
+                                </constraints>
+                                <state key="normal" title="add"/>
+                                <connections>
+                                    <action selector="addData:" destination="PS5-br-HYc" eventType="touchUpInside" id="ytM-es-x2Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfO-iP-uDE">
+                                <rect key="frame" x="80" y="498" width="80" height="70"/>
+                                <color key="backgroundColor" red="1" green="0.86109683388157898" blue="0.67364823190789469" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="delete"/>
+                                <connections>
+                                    <action selector="deleteData:" destination="PS5-br-HYc" eventType="touchUpInside" id="5gc-FR-7D9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQS-SC-Ddb">
+                                <rect key="frame" x="160" y="498" width="80" height="70"/>
+                                <color key="backgroundColor" red="0.78091591282894723" green="0.86109683388157898" blue="0.67364823190789469" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="update"/>
+                                <connections>
+                                    <action selector="updateData:" destination="PS5-br-HYc" eventType="touchUpInside" id="08p-5Z-4RY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYM-zV-Eav">
+                                <rect key="frame" x="240" y="498" width="80" height="70"/>
+                                <color key="backgroundColor" red="0.78091591282894712" green="0.63322368421052633" blue="0.67364823190789469" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="search"/>
+                                <connections>
+                                    <action selector="searchData:" destination="PS5-br-HYc" eventType="touchUpInside" id="0RF-yA-9oy"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hdQ-hY-pIO">
+                                <rect key="frame" x="16" y="28" width="288" height="462"/>
+                                <color key="backgroundColor" red="0.87063116776315785" green="0.90164987664473684" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IfO-iP-uDE" firstAttribute="leading" secondItem="eNe-Jq-TBP" secondAttribute="trailing" id="31v-IN-qBb"/>
+                            <constraint firstItem="eNe-Jq-TBP" firstAttribute="leading" secondItem="EzW-yy-GPD" secondAttribute="leading" id="3fx-Fd-Yez"/>
+                            <constraint firstItem="pQS-SC-Ddb" firstAttribute="centerY" secondItem="IfO-iP-uDE" secondAttribute="centerY" id="8ZL-9c-a3I"/>
+                            <constraint firstItem="4pS-He-Jjv" firstAttribute="top" secondItem="eNe-Jq-TBP" secondAttribute="bottom" id="8b8-dq-VPU"/>
+                            <constraint firstItem="mYM-zV-Eav" firstAttribute="height" secondItem="pQS-SC-Ddb" secondAttribute="height" id="8wi-w7-cZj"/>
+                            <constraint firstItem="IfO-iP-uDE" firstAttribute="height" secondItem="eNe-Jq-TBP" secondAttribute="height" id="B5t-Np-sqh"/>
+                            <constraint firstItem="hdQ-hY-pIO" firstAttribute="top" secondItem="V5f-o9-NEN" secondAttribute="bottom" constant="8" symbolic="YES" id="Jja-pD-Ae4"/>
+                            <constraint firstItem="pQS-SC-Ddb" firstAttribute="height" secondItem="IfO-iP-uDE" secondAttribute="height" id="Mb0-y4-4X9"/>
+                            <constraint firstItem="mYM-zV-Eav" firstAttribute="leading" secondItem="pQS-SC-Ddb" secondAttribute="trailing" id="UBo-PM-X1r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hdQ-hY-pIO" secondAttribute="trailing" id="UZz-nB-7Jf"/>
+                            <constraint firstItem="IfO-iP-uDE" firstAttribute="width" secondItem="eNe-Jq-TBP" secondAttribute="width" id="V1E-cO-yeA"/>
+                            <constraint firstItem="pQS-SC-Ddb" firstAttribute="leading" secondItem="IfO-iP-uDE" secondAttribute="trailing" id="XOT-RM-oXJ"/>
+                            <constraint firstItem="IfO-iP-uDE" firstAttribute="centerY" secondItem="eNe-Jq-TBP" secondAttribute="centerY" id="d3f-qM-cNa"/>
+                            <constraint firstItem="mYM-zV-Eav" firstAttribute="width" secondItem="pQS-SC-Ddb" secondAttribute="width" id="eDY-k7-2s7"/>
+                            <constraint firstItem="mYM-zV-Eav" firstAttribute="centerY" secondItem="pQS-SC-Ddb" secondAttribute="centerY" id="fQw-bx-GOA"/>
+                            <constraint firstItem="eNe-Jq-TBP" firstAttribute="top" secondItem="hdQ-hY-pIO" secondAttribute="bottom" constant="8" symbolic="YES" id="hUM-8k-55s"/>
+                            <constraint firstItem="eNe-Jq-TBP" firstAttribute="width" secondItem="EzW-yy-GPD" secondAttribute="width" multiplier="1:4" id="iFG-UD-aLb"/>
+                            <constraint firstItem="eNe-Jq-TBP" firstAttribute="leading" secondItem="EzW-yy-GPD" secondAttribute="leadingMargin" id="kLm-GK-NgY"/>
+                            <constraint firstItem="pQS-SC-Ddb" firstAttribute="width" secondItem="IfO-iP-uDE" secondAttribute="width" id="meV-fc-soS"/>
+                            <constraint firstItem="hdQ-hY-pIO" firstAttribute="leading" secondItem="EzW-yy-GPD" secondAttribute="leadingMargin" id="nGV-a2-MGJ"/>
+                            <constraint firstItem="hdQ-hY-pIO" firstAttribute="width" secondItem="EzW-yy-GPD" secondAttribute="width" id="u0p-3d-hQ8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="u0p-3d-hQ8"/>
+                                <exclude reference="kLm-GK-NgY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="textView" destination="hdQ-hY-pIO" id="BpU-M5-we5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kwg-Su-kzA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402.5" y="-225.5"/>
+        </scene>
+    </scenes>
+</document>
